@@ -1,0 +1,30 @@
+sudo apt-get --purge remove php-common
+sudo apt-get --purge remove mysql
+
+cd $home
+sudo nano .bashrc
+$PATH = "$PATH:/opt/lampp/bin/"
+ctrl+O
+ctrl+X
+
+
+composer create-project --prefer-dist laravel/laravel belajar-api
+cd belajar-api
+php artisan serve
+
+git config --global --list
+git config --global --unset user.name
+git config --global --unset user.email
+git config --global --unset credential.helper
+
+git config --global --add user.name xxx
+git config --global --add user.email xxx
+git remote add origin https://github.com/username/repo.git
+git push -u origin master
+
+php artisan make:controller Basic
+git push -u origin master
+
+php artisan make:model Matakuliah -m
+php artisan make:model Programstudi -m
+php artisan migrate
