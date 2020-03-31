@@ -28,3 +28,7 @@ git push -u origin master
 php artisan make:model Matakuliah -m
 php artisan make:model Programstudi -m
 php artisan migrate
+
+php artisan make:seeder ProgramstudiTableSeeder
+composer dump-autoload
+php artisan db:seed
